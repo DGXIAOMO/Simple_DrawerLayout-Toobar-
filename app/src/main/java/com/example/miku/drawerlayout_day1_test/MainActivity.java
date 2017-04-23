@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 //Toast.makeText(MainActivity.this, "Toobar", Toast.LENGTH_SHORT).show();
                 drawerLayout.openDrawer(listView);
                 break;
+
         }
         return true;
     }
@@ -48,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.mipmap.ic_home);
         toolbar.setTitle("Hello");
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //支持Toobar
         setSupportActionBar(toolbar);
+        //监听侧边栏状态
         toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close){
             @Override
             public void onDrawerClosed(View drawerView) {
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 args.putString("data", data);
                 fragment.setArguments(args);
                 manager.beginTransaction().replace(R.id.main_layout, fragment).commit();
+                //关闭侧边栏
                 drawerLayout.closeDrawer(listView);
             }
         });
