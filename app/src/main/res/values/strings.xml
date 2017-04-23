@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DrawerLayout_Day1_Test</string>
+    <string name="open">OpenDrawer</string>
+    <string name="close">CloseDrawer</string>
+</resources>
